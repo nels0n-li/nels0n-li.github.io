@@ -12,10 +12,31 @@
       background-color: #f8f9fa;
     }
     header {
-      background-color: #f5bf03;
+      background-image: url('images/luxurycity.jpg'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
       color: white;
       text-align: center;
-      padding: 1rem 0;
+      padding: 4rem 1rem;
+      position: relative;
+      height: 80vh; /* Adjust height as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header .header-content {
+      position: relative;
+      z-index: 2; /* Ensure text is above overlay */
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay for contrast */
+      z-index: 1; /* Place overlay behind text */
     }
     nav {
       background-color: #333;
@@ -55,8 +76,8 @@
 </head>
 <body>
   <header>
-    <h1>Delicious Eats</h1>
-    <p>Your favorite spot for amazing food</p>
+    <!--h1>Luxury City</h1>
+    <p>Your favorite spot for chinese takeout!</p>-->
   </header>
 
   <nav>
@@ -67,7 +88,7 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Welcome to Delicious Eats, where we serve the finest dishes made with fresh ingredients and lots of love. Come and taste the difference!</p>
+    <p>Welcome to Luxury City! Enjoy the best Chinese takeout in town, with delicious, fresh dishes. Order and taste the luxury!</p>
   </section>
 
   <section id="menu">
@@ -93,14 +114,13 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: contact@deliciouseats.com</p>
-    <p>Phone: (123) 456-7890</p>
-    <p>Address: 123 Foodie Lane, Flavor Town</p>
+    <h2>Contact</h2>
+    <p>Phone: (868) 675-6888</p>
+    <p>Address: 49 Saddle Rd, San Juan</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Delicious Eats. All Rights Reserved.</p>
+    <p>&copy; 2025 Luxury City. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
