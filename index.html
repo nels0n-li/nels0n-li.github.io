@@ -17,16 +17,16 @@
       background-position: center;
       color: white;
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 2rem 1rem;
       position: relative;
-      height: 80vh; /* Adjust height as needed */
+      height: 80vh; /* Adjust height for smaller screens */
       display: flex;
       align-items: center;
       justify-content: center;
     }
     header .header-content {
       position: relative;
-      z-index: 2; /* Ensure text is above overlay */
+      z-index: 2;
     }
     header::after {
       content: '';
@@ -35,8 +35,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay for contrast */
-      z-index: 1; /* Place overlay behind text */
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
     nav {
       background-color: #333;
@@ -46,23 +46,25 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 10px;
+      font-size: 1rem;
     }
     nav a:hover {
       text-decoration: underline;
     }
     section {
-      padding: 2rem;
+      padding: 1.5rem;
     }
     .menu {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
       gap: 1rem;
     }
     .menu-item {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      background-color: white;
+      border: 2px solid #4644448b;
+      padding: .1rem;
+      background-color: #dfbe05ef;
+  
       text-align: center;
     }
     footer {
@@ -72,12 +74,44 @@
       padding: 1rem 0;
       margin-top: 2rem;
     }
+
+    /* Media Queries for Small Screens */
+    @media (max-width: 768px) {
+      header {
+        height: 50vh; /* Reduce height for smaller screens */
+      }
+      nav a {
+        margin: 0 5px;
+        font-size: 0.9rem;
+      }
+      section {
+        padding: 1rem;
+      }
+      .menu {
+        grid-template-columns: 1fr; /* Stack menu items on smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        display: block; /* Stack links vertically */
+        margin: 10px 0;
+      }
+      header {
+        padding: 1rem;
+      }
+      .menu-item {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <!--h1>Luxury City</h1>
-    <p>Your favorite spot for chinese takeout!</p>-->
+    <div class="header-content">
+      <!--h1>Luxury City</h1>
+      <p>Your favorite spot for Chinese takeout!</p-->
+    </div>
   </header>
 
   <nav>
@@ -93,22 +127,22 @@
 
   <section id="menu">
     <h2>Our Menu</h2>
-    <div class="menu">
+    <div class="menu" style="color: rgba(230, 12, 12, 0.867); font-family: 'Cursive', Apple Chancery;">
       <div class="menu-item">
-        <h3>Margherita Pizza</h3>
-        <p>$12.99</p>
+        <h3>Beef Mix Chunky Vegetable/Fried Rice</h3>
+        <p style="word-spacing: 30px;">S:38 M:52 L:66</p>
       </div>
-      <div class="menu-item">
+      <div class="menu-item" >
         <h3>Classic Burger</h3>
-        <p>$9.99</p>
+      
       </div>
       <div class="menu-item">
         <h3>Caesar Salad</h3>
-        <p>$7.99</p>
+       
       </div>
       <div class="menu-item">
         <h3>Pasta Alfredo</h3>
-        <p>$14.99</p>
+     
       </div>
     </div>
   </section>
